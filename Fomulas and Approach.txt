@@ -1,0 +1,14 @@
+==== Table ==== 
+
+Ways of selecting child substring
+:first-of-type
+:last-of-type
+:nth-of-type(an+b)
+:nth-last-of-type(an+b)
+
+Example: -In Python --> BeautifulSoup
+
+#[2:32] = Decleration of length of Rows in selected Table (<tr)
+#td:nth-of-type(4) = 4th element(column) of selected row.
+for container in _url.select('table[cellspacing="1"] > tr')[2:32]:
+            replies = container.select_one('td:nth-of-type(4)').text.strip()
